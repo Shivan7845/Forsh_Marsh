@@ -1,0 +1,797 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+::-webkit-scrollbar{
+    width: 1vmax;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #FFA219;
+}
+nav{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3vmax;
+    position: fixed;
+    background-color: white;
+    z-index: 10;
+}
+nav > h1{
+    font: 600 3vmax "Audiowide";
+}
+nav > h1:hover{
+    cursor: pointer;
+    transform: translate(1px,1px);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+nav > h3{
+    cursor: pointer;
+    font: 600 1.5vmax "montserrat";
+}
+.page{
+    width: 100%;
+    padding: 1vmax 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;   
+}
+.page1 > h1{
+    font: 900 7vmax "Montserrat";
+    line-height: 7vmax;
+    word-spacing: -10px;
+}
+.p1-footer{
+    width: 10vmax;
+    height: 5vmax;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.p1-footer > h4{
+    font: 400 1.1vmax "serif";
+}
+.p1-footer > hr{
+    width: 0.2vmax;
+    height: 3vmax;
+    background-color: black;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: loadline 3s linear 1 both;
+}
+@keyframes loadline{
+    0%{
+        height: 3vmax;
+    }
+    50%{
+        height: 1vmax;
+    }
+    100%{
+        height: 3vmax;
+    }
+}
+.semi-circle{
+    position: absolute;
+    width: 30vmax;
+    height: 15vmax;
+    background-color: #ffa21b;
+    border-radius: 15vmax 15vmax 0 0;
+    transform: rotate(-45deg);
+    z-index: -1;
+    bottom: 20%;
+    left: 6%;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: semi 5s linear 1 forwards;
+}
+.quater{
+    position: absolute;
+    width: 15vmax;
+    height: 15vmax;
+    border-radius: 0 0 300px 0px;
+    z-index: -1;
+}
+.circle1{
+    background-color: #E9C5D3;
+    right: 12%;
+    top: 15%;
+    transform: rotate(-80deg);
+    animation: cirle1 5s linear 1 forwards;
+
+}
+.circle2{
+    background-color: #47A0E9;
+    right: 20%;
+    bottom: 2%;
+    transform: rotate(30deg);
+    animation: cirle2 5s linear 1 forwards;
+}
+/* -----------------page2 start---------------------------- */
+.p2-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.p2-content > h1{
+    font: 400 3.5vmax "serif";
+    line-height: 3.5vmax;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+}
+.p2-content span{
+    z-index: 1000;
+    position: relative;
+}
+.p2-content button:hover{
+    color: white;
+}
+.p2-content > button{
+    margin-top: 5vmax;
+    padding: 1.5vmax 3vmax;
+    border-radius: 100px;
+    border: none;
+    background-color: #FFA219;
+    font: 400 1vmax "serif";
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+.p2-content > button::after{
+    content: "";
+    width: 50%;
+    height: 100%;
+    border-radius: 100px;
+    left: 30%;
+    top: 0;
+    position: absolute;
+    background-color: black;
+    transform: translateY(100px);
+    transition: 1s;
+    
+}
+.p2-content > button:hover::after{
+    transform: translateY(0) scale(3);
+}
+/* -------------------page3 start----------------------------- */
+
+.page3{
+    padding-left:8vmax;
+}
+.p3-top{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.p3t-left{
+    width: 48%;
+    height: 100%;
+    font: 100 1vmax "montserrat";
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+}
+.p3t-left > span{
+    font: 100 1.2vmax "montserrat";
+}
+.p3t-left > h1{
+    margin: 1vmax 0;
+    font: 900 3.5vmax "montserrat";
+}
+.p3t-right{
+    padding-left: 3vmax;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    width: 48%;
+    height: 100%;
+}
+.p3t-right > h3{
+    font: 400 1.4vmax "helvetica";
+}
+.p3t-right > span {
+    font: 900 1.2vmax "montserrat";
+    padding-left: 2px;
+   position: relative;
+   cursor: pointer;
+}
+.p3t-right > span::before{
+    content: "";
+    width: 5%;
+    height: 100%;
+    left: -3%;
+    position: absolute;
+    transition: 0.25s;
+    background-color: #FFA219;
+}
+.p3t-right >span:hover::before{
+    z-index: -1;
+    width: 110%;
+}
+.p3-img{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.p3i{
+    width: 49%;
+    height: 100%;
+    position: relative;
+}
+.p3i::after{
+    content: "";
+    position: absolute;
+    width:100%;
+    height:0;
+    background-color: #FFA219;
+    transition: 0.25s;
+}
+.p3i:hover::after{
+    height:1vmax;
+}
+.p3i::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height:100%;
+    background-color: #FFA219;
+    transition: 0.25s;
+}
+.p3i:hover::before{
+    width:1vmax;
+}
+.p3i-left{
+    background-image: url(https://forsmarsh.workshopbuilt.com/wp-content/uploads/2022/10/Hero_2560x853a.jpg.webp);
+    background-position: center;
+    background-size: cover;
+}
+.p3i-right{
+    background-image: url(https://forsmarsh.workshopbuilt.com/wp-content/uploads/2023/02/ninds-image-plus-text_706x1000.jpg.webp);
+    background-position: center;
+    background-size: cover;
+}
+.p3-bottom{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.p3b-left{
+    width: 48%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+}
+.p3-bottom  h3{
+    font: 600 1.5vmax "serif";
+}
+.p3-bottom span{
+    font: 100 1vmax "montserrat";
+}
+.p3b-right{
+    width: 48%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+}
+/* -------------------------page4 start----------------- */
+.page4{
+    background-color: #F0F0F0;
+    padding-top: 3vmax;
+    /* padding-bottom: 5vmax; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+.page4::before{
+    content: "";
+    position: absolute;
+    width: 0.3vmax;
+    height: 0vmax;
+    border-radius: 100px;
+    background-color: black;
+    right: 5%;
+    transition: 0.25s;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: updown 2s linear 3 forwards;
+}
+@keyframes updown{
+    0%{
+        height: 2vmax;
+    }
+    25%{
+        height: 4vmax;
+    }
+    50%{
+        height: 6vmax;
+    }
+    100%{
+        height: 8vmax;
+    }
+}
+.page4:hover::before{
+    height: 15mvax;
+    background-color:#FFA219;
+}
+.page4 > p{
+    font: 100 1vmax "Montserrat";
+}
+.page4 > h1{
+    text-align: center;
+    font: 900 5.5vmax "montserrat";
+    line-height: 5.8vmax;
+}
+/* --------------------page5 start-------------------- */
+.page5{
+    padding-top: 10vmax;
+    padding-bottom: 10vmax;
+    background-color: #FFA219;
+    /* background-attachment: fixed; */
+}
+.page5 > h1{
+    font: 600 3vmax 'Playfair Display';
+    width: 65%;
+    text-align: center;
+}
+.page5 > button{
+    padding: 2vmax 3vmax;
+    border-radius: 100px;
+    border: none;
+    font: 600 1.2vmax "Montserrat";
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.page5 > button::before{
+    content: "";
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    border-radius: 100px;
+    left: 30%;
+    top: 0;
+    transform: translateY(100px);
+    transition: 1s;
+}
+.page5 > button:hover::before{
+    transform: translateY(0) scale(3);
+}
+.page5 > button:hover{
+    color: white;
+}
+.page5 >button> span{
+    position: relative;
+    z-index: 1;
+}
+/* ----------------page6 start----------------------- */
+.page6{
+    padding: 10vmax;
+}
+.ellipse > button{
+    width: 10vmax;
+    height: 5vmax;
+    border-radius: 50%;
+    border: 3px solid black;
+    transform: rotate(-10deg);
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 400 1.2vmax "Montserrat";
+    transition: 1s;
+}
+.page6 > h1{
+    font: 900 15vmax "Montserrat";
+    color: #D7D4D4;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: text-move 4s linear infinite forwards ;
+    position: relative;
+}
+@keyframes text-move{
+    0%{
+        color: #D7D4D4;
+    }
+    100%{
+        color: black;
+    }
+}
+.page6 > button{
+    padding: 2vmax 3vmax;
+    border-radius: 100px;
+    border: none;
+    font: 600 1.2vmax "Montserrat";
+    position: relative;
+    background-color: #FFA219;
+    overflow: hidden;
+    cursor: pointer;
+}
+.page6 > button::before{
+    content: "";
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    border-radius: 100px;
+    left: 30%;
+    top: 0;
+    transform: translateY(100px);
+    transition: 1s;
+}
+.page6 > button:hover::before{
+    transform: translateY(0) scale(3);
+}
+.page6 > button:hover{
+    color: white;
+}
+.page6 >button> span{
+    position: relative;
+    z-index: 1;
+}
+.page7{
+    width: 100%;
+    height: 100vh;
+    /* background-color: saddlebrown; */
+    padding: 5vmax 10vmax;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.p7-left{
+    padding: 5vmax 0;
+    width: 45%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+}
+.p7-left > h4{
+    font: 100 1vmax "Montserrat";
+}
+.p7-left > h1{
+    font: 900 4vmax "Montserrat";
+}
+.p7-left > p{
+    font: 400 1.3vmax "calibri";
+}
+.p7-left> button{
+    padding: 2vmax 3vmax;
+    border-radius: 100px;
+    border: none;
+    font: 600 1.2vmax "Montserrat";
+    position: relative;
+    background-color: #FFA219;
+    overflow: hidden;
+    cursor: pointer;
+}
+.p7-left > button::before{
+    content: "";
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    border-radius: 100px;
+    left: 30%;
+    top: 0;
+    transform: translateY(100px);
+    transition: 1s;
+}
+.p7-left > button:hover::before{
+    transform: translateY(0) scale(3);
+}
+.p7-left > button:hover{
+    color: white;
+}
+.p7-left >button> span{
+    position: relative;
+    z-index: 1;
+}
+.p7-right{
+    width: 40%;
+    height: 100%;
+    background-image: url(https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTQzfHxidXNpbmVzcyUyMHdvbWVufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+    background-position: top;
+    background-size: cover;
+    border-left: 1.5vmax solid #FFA219;
+    border-top: 1.5vmax solid #FFA219;
+}
+/* ---------------page8 start--------------- */
+
+.page8{
+    /* background-color: #dadada; */
+    padding: 2vmax 7vmax;
+}
+.p8-top{
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items:center;
+    /* background-color: rosybrown; */
+}
+.p8-top > h4{
+    font: 100 1vmax "montserrat";
+}
+.p8-top > h1{
+    margin: 2vmax 0;
+    text-align: center;
+    font: 900 4vmax "Montserrat";
+    word-spacing: 5px;
+    line-height: 4.5vmax;
+}
+.p8-top > p{
+    text-align: center;
+    font: 400 1.2vmax "Helvetica";
+}
+.p8-bottom{
+    margin-top: 3vmax;
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    /* background-color: red; */
+
+}
+.p8b{
+    width: 30%;
+    height: 100%;
+   display: flex;
+   flex-direction: column;
+  justify-content: space-between;
+    /* background-color: rebeccapurple; */
+}
+
+.overlay{
+    width: 100%;
+    height: 55%;
+    overflow: hidden;
+}
+.img1{
+    width: 100%;
+    height: 100%;
+    background-image: url(https://images.unsplash.com/photo-1564156280315-1d42b4651629?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTB8fGZhdGhlciUyMGFuZCUyMHNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60);
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s;
+}
+.p8b:hover .img1{
+    transform: scale(1.3);
+}
+.contents{
+    width: 100%;
+    height: 35%;
+    /* background-color: rosybrown; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+}
+.contents > button{
+    padding: 0.5vmax 1vmax;
+    font: 600 1vmax "montserrat";
+    border: none;
+    background-color: #D7D4D4;
+    border-radius: 100px;
+}
+.contents > p{
+    font: 600 1.7vmax "serif";
+}
+.contents > span{
+    font: 100 1vmax "montserrat";
+    color: gray;
+}
+.img2{
+    width: 100%;
+    height: 100%;
+    background-image: url(https://plus.unsplash.com/premium_photo-1661761222780-7981c33bfef3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTQ0fHxkb2N0b3J8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60);
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s;
+}
+.p8b:hover .img2{
+    transform: scale(1.3);
+} 
+
+/* ------------page9 start--------------------- */
+.page9{
+    width: 100%;
+    height: 80vh;
+    padding-bottom: 5vmax;
+}
+.p9-top{
+    width: 100%;
+    height: 18vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2vmax;
+}
+.p9-top > button{
+    padding: 2vmax 3vmax;
+    border-radius: 100px;
+    border: none;
+    font: 600 1.2vmax "Montserrat";
+    position: relative;
+    background-color: #FFA219;
+    overflow: hidden;
+    cursor: pointer;
+}
+.p9-top > button::before{
+    content: "";
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    border-radius: 100px;
+    left: 30%;
+    top: 0;
+    transform: translateY(100px);
+    transition: 1s;
+}
+.p9-top > button:hover::before{
+    transform: translateY(0) scale(3);
+}
+.p9-top > button:hover{
+    color: white;
+}
+.p9-top >button> span{
+    position: relative;
+    z-index: 1;
+}
+.p9-bottom{
+    padding: 0 5vmax;
+    padding-bottom: 3vmax;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    /* background-color: #dadada; */
+}
+.p9b-left{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    padding-top: 5vmax;
+    /* background-color: rebeccapurple; */
+}
+.p9b-left > span{
+    display: flex;
+    align-items: center;
+    gap: 1vmax;
+  margin-bottom: 5vmax;
+}
+.p9b-left > span > h2{
+    font: 900 3vmax "gilroy";
+}
+.p9b-left > h1{
+    font: 600 2vmax "Audiowide";
+}
+.p9b-left> p{
+    font: 100 1.1vmax "calibri";
+   margin-top: 4vmax;
+}
+.p9b-right{
+    padding-bottom: 0vmax;
+    padding-top: 5vmax;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+.p9b-right  h3{
+    cursor: pointer;
+    font: 600 1.2vmax "Montserrat";
+}
+ul{
+    margin-top: 1.5vmax;
+    list-style: none;
+}
+.p9b-right p{
+    font: 400 1.2vmax "montserrat";
+    margin-top: 1vmax;
+    opacity: .8;
+}
+li{
+    font: 500 1.1vmax "montserrat";
+    margin-top: 0.5vmax;
+    position: relative;
+    cursor: pointer;
+}
+li::before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    left: -5%;
+    background-color: #FFA219;
+    transition: 0.5s;
+    z-index: -1;
+}
+li:hover::before{
+    width: 105%;
+}
+.list3 > h4{
+    font: 500 1.2vmax "montserrat";
+   position: relative;
+    margin-top: 1vmax;
+    cursor: pointer;
+    color: rgb(63, 62, 62);
+}
+.list3 > h4::before{
+    content: "";
+    position: absolute;
+    display: inline;
+    width: 78%;
+    height: 100%;
+    border-bottom: 3px solid black;
+    transition: 0.5s;
+}
+.list3 > h4:hover::before{
+    border-bottom: 3px solid #FFA219;
+}
+.icon{
+    width: 5.5vmax;
+    height: 2.5vmax;
+  
+   margin-top: 8vmax;
+
+    display: flex;
+    justify-content: space-between;
+}
+.icon  i{
+    color: white;
+}
+.icon1{
+    width: 50%;
+    height: 100%;
+    border-radius: 50%;
+    background-color:black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.25s;
+}
+.icon1:hover,.icon2:hover{
+    background-color: #FFA219;
+}
+.icon2{
+    width: 50%;
+    height: 100%;
+    border-radius: 50%;
+    margin-left: 0.5vmax;
+    background-color:black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.25s;
+}
+
+
