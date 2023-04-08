@@ -932,6 +932,13 @@ li:hover::before{
     nav > h3{
         font-size: 2vmax;
     }
+
+    .page1 > .semi-circle{
+        top: 45%;
+        left: 0%;
+        position: absolute;
+       
+    }
     .page1 > h1{
       width:10  0%;
       margin: auto;
@@ -944,13 +951,12 @@ li:hover::before{
     .page1 > .filler1{
         display: none;
     }
-    .semi-circle,.quater{
-        display: none;
-    }
+    
     .page1,.page2{
         min-height: 60vh;
         padding: 0;
         margin: 0;
+        position: relative;
     }
     .p1-footer > h4{
         font: 400 2.5vmax "serif";
