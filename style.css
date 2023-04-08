@@ -165,7 +165,7 @@ nav > h3{
 }
 /* -------------------page3 start----------------------------- */
 
-.page3{
+/* .page3{
     padding-left:8vmax;
 }
 .p3-top{
@@ -294,6 +294,123 @@ nav > h3{
     flex-direction: column;
     justify-content: space-around;
     align-items: start;
+} */
+.page3 {
+    width: 100%;
+    display: flex;
+    padding-left: 8%;
+    margin: 10% 0;
+}
+
+.p3-left {
+    width: 50%;
+    padding-right: 2vmax;
+}
+
+.p3l-subtitle {
+    color: gray;
+    font: 400 1vmax "montserrat";
+}
+
+.p3-left h1 {
+    font: 900 3.5vmax "montserrat";
+    line-height: 4vmax;
+    margin: 2vmax 0;
+}
+
+.p3l-image {
+    height: 60vh;
+    width: 100%;
+    background-image: url(https://www.forsmarsh.com/wp-content/uploads/2023/02/casestudy-ninds-preview.jpg.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* border-top: 0 solid #ffa21b;
+    border-right: 0 solid #ffa21b; */
+    transition: 0.5s all;
+    position: relative;
+}
+.p3l-image::before{
+    content: "";
+    position: absolute;
+    background-color: #FFA219;
+    width: 0;
+    height: 100%;
+    transition: 0.25s;
+}
+.p3l-image:hover::before{
+    width: 1vmax;
+}
+.p3l-image::after{
+    content: "";
+    position: absolute;
+    background-color: #FFA219;
+    width: 100%;
+    height: 0;
+    transition: 0.25s;
+}
+.p3l-image:hover::after{
+    height: 1vmax;
+}
+
+.p3-left h3,
+.p3-right h3 {
+    margin: 2vmax 0;
+    font: 500 2vmax "serif";
+    line-height: 2vmax;
+}
+
+.p3l-date {
+    color: gray;
+    font: 400 1.5vmax "montserrat";
+}
+
+.p3-right {
+    width: 50%;
+}
+
+.p3r-subtitle {
+   
+    width: 75%;
+    padding-left: 10%;
+    margin-top: 3vmax;
+    font: 400 1.2vmax "montserrat";
+    line-height: 2vmax;
+    margin-bottom: 1vmax;
+}
+
+.p3r-btn {
+    margin-left: 10%;
+    margin-bottom: 2vmax;
+    font: 900 1vmax "montserrat";
+    border: none;
+    background-color: transparent;
+    position: relative;
+}
+
+.p3r-btn:before {
+    content: "";
+    position: absolute;
+    left: -15%;
+    height: 100%;
+    width: 10%;
+    background-color: #ffa21b;
+    z-index: -1;
+    transition: 0.25s all;
+}
+
+.p3r-btn:hover::before {
+    width: 130%;
+}
+
+.p3r-image {
+    background-image: url(https://www.forsmarsh.com/wp-content/uploads/2023/02/casestudy-arng-preview.jpg.webp);
+    border: none;
+   
+}
+
+.p3r-image:hover {
+    border: none;
 }
 /* -------------------------page4 start----------------- */
 .page4{
@@ -794,4 +911,300 @@ li:hover::before{
     transition: 0.25s;
 }
 
+@media (max-width:600px){
 
+    *{
+         overflow-x: hidden;
+    }
+   
+    ::-webkit-scrollbar{
+        width: 1vmax;
+        display: none;
+    }
+    ::-webkit-scrollbar-thumb{
+        background-color: #FFA219;
+        display:none;
+    }
+    nav> h1{
+        font-size: 3.8vmax; 
+        letter-spacing: 2px;
+    }
+    nav > h3{
+        font-size: 2vmax;
+    }
+    .page1 > h1{
+      width:10  0%;
+      margin: auto;
+      padding: 0 1vmax;
+      text-align: center;
+      font-size: 4.5vmax;
+      word-spacing: 3px;
+      line-height: 6vmax;
+    }
+    .page1 > .filler1{
+        display: none;
+    }
+    .semi-circle,.quater{
+        display: none;
+    }
+    .page1,.page2{
+        min-height: 60vh;
+        padding: 0;
+        margin: 0;
+    }
+    .p1-footer > h4{
+        font: 400 2.5vmax "serif";
+    }
+    .p1-footer > hr{
+        width: 0.3vmax;
+        border: none;
+    }
+    .p1-footer{
+        width: 15vmax;
+    }
+    .p2-content> h1 {
+        padding: 0 1vmax;
+        width: 100%;
+    }
+    .p2-content > button{
+        font:600 1.8vmax "montserrat";
+    }
+    .page3{
+        padding: 0 1vmax;
+        display: flex;
+        flex-direction: column;
+       
+    }
+    .p3-left{
+        width: 100%;
+        padding-left: 5%;
+       /* background-color: red; */
+    }
+    .p3l-subtitle{
+        font-size: 1.5vmax;
+    }
+    .p3-right{
+        width: 100%;
+        padding: 0 5%;
+    }
+
+    .p3-left h3,
+    .p3-right h3{
+        font-size: 2.5vmax;
+        line-height: 3vmax;
+    }
+    .p3r-btn{
+        margin: 2vmax 0;
+        font-size: 1.5vmax;
+    }
+    .p3r-subtitle{
+        font-size: 2vmax;
+      padding: 0;
+        width: 90%;
+    }
+    .page4 > .filler4{
+        display: none;
+    }
+    .page4{
+        padding: 0;
+        width: 100%;
+        min-height: 30vh;
+        display: flex;
+        flex-direction:column;
+        justify-content: space-around;
+       
+        /* align-items: start; */
+    }
+    .page4 > h1{
+        font-size: 3vmax;
+        line-height: 4vmax;
+    }
+    .page4 > p{
+        font-size: 1.5vmax;
+    }
+    .page5{
+        min-height: 40vh;
+        justify-content: space-around;
+
+    }
+    .page5 > h1{
+        margin-bottom: 2vmax;
+    }
+    .page5 > button{
+        font-size: 1.8vmax;
+    }
+
+    .page5 > .filler4{
+        display: none;
+
+    }
+    .page6 {
+        min-height: 60vh;
+    }
+
+    .page6 > h1{
+        font-size: 9vmax;
+    }
+    .page6 > button{
+        font-size: 1.8vmax;
+    }
+    .page7{
+        padding: 2vmax 3vmax;
+        flex-direction: column;
+    }
+    .p7-left{
+        /* background-color: red; */
+        padding: 2vmax 0;
+        width: 100%;
+        margin: auto;
+       align-items: center;
+       margin-bottom: 2vmax;
+    }
+    .p7-left > h4{
+        font-size: 3vmax;
+    }
+    .p7-left > h1{
+        margin: 1vmax 0;
+        font-size: 7vmax;
+        line-height: 7vmax;
+    }
+    .p7-left > p{
+        text-align: center;
+        font-size: 2vmax;
+    }
+    .p7-left > button{
+        font-size: 1.8vmax;
+    }
+    .p7-right{
+        width: 100%;
+    }
+
+    .page8{
+        padding: 3vmax 0;
+    }
+    .p8-top{
+        /* background-color: red; */
+       
+
+    }
+    .p8-top > h4{
+        font: 600 2.5vmax "montserrat";
+    }
+    .p8-top > h1{
+        margin: 3vmax 0;
+        font-size: 5.5vmax;
+        line-height: 6vmax;
+        word-spacing: -2px;
+    }
+    .p8-top > P{
+        font: 500 2.2vmax "montserrat";
+
+    }
+    .p8-bottom{
+        /* min-height: 80vh; */
+        flex-direction: column;
+    }
+    
+    .p8b-left{
+        /* background-color: red; */
+        padding: 0 3vmax;
+        width: 100%;
+        min-height: 80vh;
+    }
+
+    .overlay{
+        height: 75%;
+    }
+    .img1, .img2{
+        background-position: top;
+    }
+    .contents > button{
+        margin: 1vmax 0;
+        padding: 1.5vmax 3vmax;
+        font-size: 1.8vmax;
+    }
+    .contents > p{
+      font-size: 2.5vmax;
+        width: 100%;
+        /* background-color: red; */
+    }
+    .contents > span{
+        font:600 2vmax "montserrat";
+    }
+    .p8b-center{
+        /* background-color: red; */
+        padding: 0 3vmax;
+        min-height: 80vh;
+        width: 100%;
+    }
+    .p8b-right{
+        display: none;
+    }
+    .page9{
+        /* position: fixed; */
+        min-height: 40vh;
+        padding: 0;
+        /* background-color: red; */
+    }
+    .p9-top{
+        margin: 1vmax 0;
+       align-items: center;
+     /* background-color: #47A0E9; */
+       height: 10vh;
+    }
+    .p9-top > button{
+        font-size: 1.8vmax;
+    }
+    .p9-bottom {
+        flex-direction:column-reverse;
+        min-height: 60vh;
+        padding: 0;
+    }
+    .p9b-right{
+        /* background-color: yellow; */
+        width: 100%;
+        margin: 0;
+        justify-content: space-around;
+    }
+    .p9b-right h3{
+        font-size: 2.5vmax;
+    }
+    .p9b-right li{
+        font:600 1.8vmax "montserrat";
+    }
+    .p9b-right p{
+        font-size: 1.5vmax;
+    }
+    .icon {
+        width: 10vmax;
+        height: 5vmax;
+    }
+    .p9b-left{
+        width: 100%;
+        height: 50vh;
+        padding: 0 2vmax;
+        justify-content: center;
+        /* flex-direction: row; */
+
+        /* background-color: yellow; */
+    }
+    .p9b-left > h1{
+        font-size: 4vmax;
+    }
+    .p9b-left > span{
+        margin: 0 ;
+        
+    }
+    .p9b-left > span > h2{
+        font-size: 6vmax;
+        
+    }
+    .p9b-left p{
+        margin: 1vmax 0;
+        font-size: 1.8vmax;
+    }
+
+
+
+
+}
